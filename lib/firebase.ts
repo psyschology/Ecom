@@ -17,14 +17,15 @@ import type { Product, Order } from "@/types"
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDPB4XV-uPVA_LYlU2TyJ-Og9uBpZ_S7-c",
-  authDomain: "ecom-39898.firebaseapp.com",
-  projectId: "ecom-39898",
-  storageBucket: "ecom-39898.firebasestorage.app",
-  messagingSenderId: "872460109128",
-  appId: "1:872460109128:web:412902c6e7e923cbee1f7d",
-  measurementId: "G-CFRGKPTELJ"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 }
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
